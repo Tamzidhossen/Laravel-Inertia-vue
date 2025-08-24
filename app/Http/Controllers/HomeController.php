@@ -18,7 +18,8 @@ class HomeController extends Controller
     }
     public function Page2()
     {
-        return Inertia::render('Page2');
+        $share_Data = ["message" => "Text Message", "status" => true, "share_data" => "This is shared data from controller"];   
+        return Inertia::render('Page2')->with($share_Data);
     }
     public function Page3()
     {
