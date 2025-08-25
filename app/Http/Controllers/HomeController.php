@@ -29,6 +29,14 @@ class HomeController extends Controller
     {
         return Inertia::render('Page4');
     }
+
+    public function PostBackRequest(Request $request){
+        $JsonObject = $request->input();
+        $data = ['message'=>'Submit Success', 'status' => true, 'share_data'=>$JsonObject];
+        
+        return redirect()->route('page4')->with($data);
+    }
+
     public function Page5()
     {
         return Inertia::render('Page5');
