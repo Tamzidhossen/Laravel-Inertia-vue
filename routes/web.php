@@ -12,3 +12,4 @@ Route::get('/page4', [HomeController::class, 'Page4'])->name('page4');
 Route::get('/page5', [HomeController::class, 'Page5'])->name('page5');
 
 Route::post('/PostBackRequest', [HomeController::class, 'PostBackRequest'])->name('PostBackRequest');
+Route::post('/UploadRequest', [HomeController::class, 'UploadRequest'])->name('UploadRequest');

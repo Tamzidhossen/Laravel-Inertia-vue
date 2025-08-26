@@ -41,4 +41,11 @@ class HomeController extends Controller
     {
         return Inertia::render('Page5');
     }
+
+    public function UploadRequest(Request $request){
+        $img = $request->file('image_files');
+        $img->move(public_path('uploads'), $img->getClientOriginalName());
+        $data =['message' => 'Submit Success', 'status' => true, 'share_data'=>"Share_data"];
+        return redirect()->route('page5')->with($data);
+    }
 }
