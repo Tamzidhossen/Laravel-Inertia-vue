@@ -3,9 +3,9 @@
     import { useForm, usePage } from '@inertiajs/vue3';
     const page = usePage();
     const form = useForm({
-        first_name: 'Tamzid',
-        last_name: 'Hossain',
-        email: 'tamzid@hossain.com',
+        first_name: '',
+        last_name: '',
+        email: '',
     });
     
     function submit() {
